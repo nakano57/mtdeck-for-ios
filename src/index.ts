@@ -1,3 +1,4 @@
-import { addios } from "./ts/addios";
+import { disableZoom } from "./ts/disableZoom";
 
-new addios().ready();
+const diszoom = new disableZoom();
+diszoom.apply();

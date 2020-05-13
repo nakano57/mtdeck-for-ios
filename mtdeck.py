@@ -1,10 +1,16 @@
 import urllib.request
 import pyto_ui as ui
+import pyto_core
 import os
 import sys
 
 requirements = {'mtdeck.user.js': 'https://raw.githubusercontent.com/Compeito/MTDeck/master/dist/mtdeck.user.js',
                 'mtdeck4ios.user.js': 'https://raw.githubusercontent.com/nakano57/mtdeck-for-ios/master/dist/mtdeck4ios.user.js'}
+
+
+def update_all():
+    for name, url in requirements.items():
+        dl_js(name, url)
 
 
 def dl_js(name, url):
@@ -28,6 +34,8 @@ def close_button(sender):
     sender.superview.close()
 
 
+update_all()
+
 v = ui.View()
 v.navigation_bar_hidden = True
 
@@ -49,3 +57,4 @@ b.action = close_button
 v.add_subview(w)
 v.add_subview(b)
 ui.show_view(v, ui.PRESENTATION_MODE_FULLSCREEN)
+pyto_core.startup_script()

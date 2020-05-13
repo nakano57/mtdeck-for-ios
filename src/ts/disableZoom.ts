@@ -1,9 +1,9 @@
-export class addios {
-  public ready(): void {
+export class disableZoom {
+  public apply(): void {
     this.lockZoom();
   }
 
-  public lockZoom() {
+  private lockZoom() {
     var zoomLevel = 1.0;
     var tag: HTMLInputElement = <HTMLInputElement>(
       document.querySelector("meta[name=viewport]")
