@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "MTDeck4iOS",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+  "content_scripts": [
+    {
+      "js": [
+        "./mtdeck4ios.user.js"
+      ],
+      "matches": [
+        "https://tweetdeck.twitter.com/*"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

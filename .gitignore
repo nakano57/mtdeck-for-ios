@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+*.log
+web-ext-artifacts
+mtdeck.user.js
+mtdeck4ios.user.js
+dist/*
+!dist/mtdeck4ios.user.js
