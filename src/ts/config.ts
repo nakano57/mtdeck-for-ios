@@ -26,7 +26,7 @@ export class Config {
   }
 
   private quite() {
-    location.href = "pyto://x-callback/?code=[superview.close()]";
+    location.href = "https://pyto.app/g26d57/?code=[superview.close()]";
     //location.href = "http://google.com";
   }
 }
