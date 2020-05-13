@@ -28,8 +28,8 @@ def userjs(sender):
 
 def opener(sender):
     print(sender.url)
-
-
+    
+    
 def close_button(sender):
     sender.superview.close()
 
@@ -41,8 +41,8 @@ v.navigation_bar_hidden = True
 
 w = ui.WebView('https://tweetdeck.twitter.com')
 w.background_color = ui.Color.rgb(31, 41, 55, 1)
-w.did_finish_loading = userjs
-w.did_start_loading = opener
+w.did_start_loading = userjs
+w.did_fail_loading = opener
 w.size = (v.width, v.height)
 w.flex = [ui.FLEXIBLE_HEIGHT]
 w.content_mode = ui.CONTENT_MODE_SCALE_ASPECT_FILL
