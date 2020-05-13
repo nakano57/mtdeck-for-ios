@@ -17,7 +17,7 @@ class MTDeck:
         # self._token = ''.join(randlst)
         self._token = 'S3dgz3ECu3'
 
-    def update_all(self,):
+    def update_all(self):
         for name, url in self.requirements.items():
             dl_js(name, url)
 
