@@ -1,5 +1,5 @@
 export class disableZoom {
-  public apply(): void {
+  public init(): void {
     this.lockZoom();
   }
 
