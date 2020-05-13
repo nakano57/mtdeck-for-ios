@@ -2,6 +2,7 @@
 node_modules
 *.log
 web-ext-artifacts
+mtd.js
 mtdeck.user.js
 mtdeck4ios.user.js
 dist/*

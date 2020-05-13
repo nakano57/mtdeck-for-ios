@@ -3,20 +3,20 @@ import pyto_ui as ui
 import os
 import sys
 
+requirements = {'mtdeck.user.js': 'https://raw.githubusercontent.com/Compeito/MTDeck/master/dist/mtdeck.user.js',
+                'mtdeck4ios.user.js': 'https://raw.githubusercontent.com/nakano57/mtdeck-for-ios/master/dist/mtdeck4ios.user.js'}
 
-def dl_js():
-    url = 'https://raw.githubusercontent.com/Compeito/MTDeck/master/dist/mtdeck.user.js'
-    urllib.request.urlretrieve(url, 'mtdeck.user.js')
+
+def dl_js(name, url):
+    urllib.request.urlretrieve(name, url)
 
 
 def userjs(sender):
-    requirements = ['mtdeck.user.js', 'unzoom.js']
-    for file in requirements:
-        if os.path.isfile(file) == False:
-            dl_js()
-        with open(file, 'r') as f:
+    for name, url in requirements.items():
+        if os.path.isfile(name) == False:
+            dl_js(name, url)
+        with open(name, 'r') as f:
             js = f.read()
-
             sender.evaluate_js(js)
 
 
