@@ -14,7 +14,7 @@ def update_all():
 
 
 def dl_js(name, url):
-    urllib.request.urlretrieve(name, url)
+    urllib.request.urlretrieve(url, name)
 
 
 def userjs(sender):
