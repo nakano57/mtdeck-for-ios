@@ -1,0 +1,29 @@
+{
+  "name": "mtdeck4ios",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "homepage": "https://github.com/nakano57/mtdeck-for-ios",
+  "author": "nakano57",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production && web-ext build -s dist -o && web-ext lint -s dist",
+    "_dev:pack": "webpack --mode development --watch",
+    "_dev:ext": "web-ext run -v -s dist -u tweetdeck.twitter.com",
+    "dev:firefox": "webpack --mode development && concurrently --kill-others \"yarn _dev:pack\" \"yarn _dev:ext -p default\"",
+    "dev:chrome": "webpack --mode development && concurrently --kill-others \"yarn _dev:pack\" \"yarn _dev:ext --target chromium\""
+  },
+  "dependencies": {
+    "@types/chrome": "^0.0.108",
+    "chrome": "^0.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.2",
+    "web-ext": "^4.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "webpack-userscript": "^2.5.3"
+  }
+}

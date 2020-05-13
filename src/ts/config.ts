@@ -26,7 +26,6 @@ export class Config {
   }
 
   private quite() {
-    location.href = "https://pyto.app/g26d57/?code=[superview.close()]";
-    //location.href = "http://google.com";
+    location.href = "https://example.com/?quit_token=S3dgz3ECu3";
   }
 }
