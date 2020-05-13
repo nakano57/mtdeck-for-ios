@@ -1,4 +1,4 @@
-export class disableZoom {
+export class DisableZoom {
   public init(): void {
     this.lockZoom();
   }
@@ -25,6 +25,5 @@ export class disableZoom {
         zoomLevel +
         " user-scalable=no"
     );
-    console.log("Hello!");
   }
 }
